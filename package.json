@@ -53,9 +53,8 @@
   "main": "src/index.js",
   "module": "./dist/index.esm.mjs",
   "files": [
-    "src/index.js",
     "dist/",
-    "src/libs/"
+    "src/"
   ],
   "exports": {
     ".": {
