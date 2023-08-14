@@ -1,0 +1,74 @@
+{
+  "name": "@mkdierz/json-compressor",
+  "version": "0.0.0-development",
+  "description": "A module for compressing and decompressing JSON data using Gzip compression algorithm and HPack compression algorithm.",
+  "scripts": {
+    "test": "jest",
+    "build": "rm -rf dist && rollup -c",
+    "eslint": "./node_modules/eslint/bin/eslint.js --max-warnings 0 --ext .js .",
+    "eslint:fix": "./node_modules/eslint/bin/eslint.js --max-warnings 0 --ext .js --fix .",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": [
+    "JSON",
+    "HPack",
+    "Gzip"
+  ],
+  "maintainers": [
+    {
+      "name": "Syibbran Mulaesyi",
+      "email": "msyibbran24@gmail.com"
+    }
+  ],
+  "readmeFilename": "README.md",
+  "author": "Syibbran Mulaesyi",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.10",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-terser": "^0.4.3",
+    "eslint": "^8.47.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-jest": "^27.2.3",
+    "jest": "^29.6.2",
+    "node-mocks-http": "^1.12.2",
+    "rollup": "^3.28.0",
+    "rollup-plugin-polyfill-node": "^0.12.0",
+    "semantic-release": "^21.0.7"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.3",
+    "zlib": "^1.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MkDierz/json-compressor.git"
+  },
+  "main": "src/index.js",
+  "module": "./dist/index.esm.mjs",
+  "files": [
+    "src/index.js",
+    "dist/",
+    "src/libs/"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.mjs",
+      "require": "./src/index.js"
+    },
+    "./package.json": "./package.json",
+    "./dist/*": "./dist/*",
+    "./src/*": "./src/*",
+    "./src/libs/*": "./src/libs/*",
+    "./src/utils/*": "./src/utils/*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
