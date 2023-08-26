@@ -1,3 +1,5 @@
+const { Buffer } = require('buffer');
+
 /**
  * Calculate the byte length of the input data.
  * It supports data types: String, Buffer, Array, and Object.
